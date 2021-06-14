@@ -1,0 +1,82 @@
+@import '../Variables/fonts';
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6.3rem 24rem 1fr;
+    grid-template-areas: 
+    ". longread"
+    "oornl longread"
+    "test oornlllll";
+    
+    .projects__title{
+        font-family: 'Airbnb Cereal App Medium';
+        font-size: 2rem;
+        color: white;
+    }
+
+    .longread{
+        grid-area: longread;
+    }
+}
+
+
+.project-front{
+    text-decoration: none;
+
+    .project-front__img{
+        transition: opacity 0.1s ease-in-out;
+        max-width: 100%;
+        width: 23.4rem;
+        border-radius: 0.5rem;
+    }
+
+    .project-front__img:hover{
+        opacity: 0.8;
+    }
+
+    .project-front__title{
+        font-family: 'Airbnb Cereal App Book';
+        font-size: 1.8rem;
+        line-height: 1.4;
+        color: white;
+        opacity: 0.8;
+        margin-top: 1rem;
+    }
+
+    .project-front__tags{
+        font-family: 'Airbnb Cereal App Book';
+        font-size: 1.4rem;
+        line-height: 1.4;
+        color: white;
+        opacity: 0.4;
+    }
+}
+
+
+@media screen and (max-width: 528px) {
+    .projects{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .testingtesting, .test{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 2.4rem;
+    }
+
+    .redesign-oornl, .redesign-oornl-twee, .projects__title{
+        margin-bottom: 2.4rem;
+    }
+
+    .project-front__img{
+        transition: opacity 0.1s ease-in-out;
+        max-width: 100% !important;
+        width: 50rem !important;
+        border-radius: 0.5rem;
+    }
+}

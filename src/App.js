@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './Styles/main.scss';
+
+import Intro from "./Components/Intro";
+import Projects from "./Components/Projects";
+import Footer from "./Components/Footer";
+import Copy from "./Components/Copy";
+import ProjectDetail from "./Components/ProductDetail";
+
+const NoMatchRoute = () => <div>404 Page</div>;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <div className="alignment">
+            <div className="wrapper">
+              <Intro />
+              <div className="thematic-break"></div>
+              <main>
+                <Projects />
+              </main>
+              <div className="thematic-break"></div>
+              <Footer />
+              <Copy />
+            </div>
+          </div>
+        </Route>
+        <Route path="/project/:id" exact render={(props) => <ProjectDetail {...props} />} />
+        <Route>
+          <NoMatchRoute />
+        </Route>
+      </Switch>
+    </Router>
+    
   );
 }
 
