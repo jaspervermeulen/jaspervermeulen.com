@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ProgressiveImageLoad from "../Helpers/progressiveImageLoad";;
 
 const Project = ({ project }) => {
-  const [src, { blur }] = ProgressiveImageLoad('http://localhost:1337' + project.imagelow.url, 'http://localhost:1337' + project.image.url);
+  const [src, { blur }] = ProgressiveImageLoad('https://jaspervermeulen-strapi.herokuapp.com' + project.imagelow.url, 'https://jaspervermeulen-strapi.herokuapp.com' + project.image.url);
 
 
   return (

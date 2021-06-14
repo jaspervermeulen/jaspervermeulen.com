@@ -9,7 +9,7 @@ const ProductDetail = (props) => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:1337/projects/' + props.match.params.id)
+      .get('https://jaspervermeulen-strapi.herokuapp.com/' + props.match.params.id)
       .then((res) => {
         setProject(res.data);
       })
@@ -35,7 +35,7 @@ const ProductDetail = (props) => {
               <div className="detail__top">
                 <img
                   className="detail__top--img"
-                  src={`http://localhost:1337` + project.image['url']}
+                  src={`https://jaspervermeulen-strapi.herokuapp.com` + project.image['url']}
                   alt={project.title}
                 />
                 <p className="detail__top--title">{project.title}</p>
@@ -63,7 +63,7 @@ const ProductDetail = (props) => {
                           <img
                             className="detail__intro--item--image"
                             key={image.id}
-                            src={`http://localhost:1337` + image.url}
+                            src={`https://jaspervermeulen-strapi.herokuapp.com` + image.url}
                             alt={project.title}
                           ></img>
                         );

@@ -7,7 +7,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:1337/projects')
+    axios.get('https://jaspervermeulen-strapi.herokuapp.com/projects')
     .then((res) => {
       setProjects(res.data);
     })
