@@ -1,0 +1,13 @@
+.light {
+  --theme-color: #A80000;
+  --theme-page-background: #FFF;
+  --theme-page-background-around: #33333336;
+  --theme-page-text: #111;
+}
+
+.dark {
+  --theme-color: #0000A8;
+  --theme-page-background: #333333;
+  --theme-page-background-around: rgba(255, 255, 255, 0.233);
+  --theme-page-text: #FFF;
+}

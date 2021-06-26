@@ -1,12 +1,12 @@
 @import '../Variables/fonts';
+@import '../Variables/theme.scss';
 
 .header{
-  margin-top: 16.8rem;
+  padding-top: 16.8rem;
 
   .header__title{
     font-family: 'Airbnb Cereal App Medium';
     font-size: 2rem;
-    color: white;
   }
 
   .header__subtitle{
@@ -14,7 +14,6 @@
     font-family: 'Airbnb Cereal App Book';
     font-size: 1.8rem;
     line-height: 1.4;
-    color: white;
     opacity: 0.8;
   }
   
@@ -23,18 +22,17 @@
     margin-bottom: 1rem;
   
     .header__buttons--button{
-      font-family: Arial, Helvetica, sans-serif;
       font-size: 1.6rem;
-      background-color: #474747;
+      background-color: var(--theme-page-background-around);
+      color: var(--theme-page-text);
       padding: 1rem 1.4rem;
-      color: white;
       text-decoration: none;
       border-radius: 0.5rem;
       transition: 0.1s ease-in-out;
     }
 
     .header__buttons--button:hover{
-      background-color: #5c5c5c;
+      opacity: 0.6;
     }
 
     .header__buttons--button-margin{
@@ -45,7 +43,7 @@
 
 @media screen and (max-width: 528px) {
   .header{
-    margin-top: 8rem;
+    padding-top: 8rem;
   }
 }
 
@@ -53,9 +51,8 @@
   .header__buttons{
     display: flex;
     flex-wrap: wrap;
-
-
   }
+
   .header{
     .header__buttons{
       .header__buttons--button-margin{

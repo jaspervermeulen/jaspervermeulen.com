@@ -4,7 +4,7 @@
   .footer__title{
     font-family: 'Airbnb Cereal App Medium';
     font-size: 2rem;
-    color: white;
+    color: var(--theme-page-text);
   }
 
   .footer__subtitle{
@@ -12,7 +12,7 @@
     font-family: 'Airbnb Cereal App Book';
     font-size: 1.8rem;
     line-height: 1.4;
-    color: white;
+    color: var(--theme-page-text);
     opacity: 0.8;
   }
   
@@ -21,18 +21,17 @@
     margin-bottom: 1rem;
 
     .footer__buttons--button{
-      font-family: Arial, Helvetica, sans-serif;
       font-size: 1.6rem;
-      background-color: #474747;
+      background-color: var(--theme-page-background-around);
       padding: 1rem 1.4rem;
-      color: white;
+      color: var(--theme-page-text);
       text-decoration: none;
       border-radius: 0.5rem;
       transition: 0.1s ease-in-out;
     }
 
     .footer__buttons--button:hover{
-      background-color: #5c5c5c;
+      opacity: 0.6;
     }
 
     .footer__buttons--button-margin{
