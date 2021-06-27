@@ -6,6 +6,7 @@ import './Styles/main.scss';
 import Intro from './Components/Intro';
 import Projects from './Components/Projects';
 import ProjectDetail from './Components/ProductDetail';
+import Curriculum from './Components/Curriculum';
 
 const NoMatchRoute = () => <div>404 Page</div>;
 
@@ -59,6 +60,12 @@ function App() {
             exact
             render={(props) => <ProjectDetail {...props} />}
           />
+          <Route
+            path="/cv"
+            exact
+          >
+            <Curriculum />
+          </Route>
           <Route>
             <NoMatchRoute />
           </Route>
